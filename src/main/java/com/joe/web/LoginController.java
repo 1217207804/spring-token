@@ -36,6 +36,7 @@ public class LoginController {
     public ApiResponse login(@RequestBody Map<String, String> map) {
         String loginName = map.get("loginName");
         String password = map.get("password");
+        System.out.println("loginName:"+loginName+ " password:"+password);
         //身份验证是否成功
         boolean isSuccess = userService.checkUser(loginName, password);
         if (isSuccess) {
